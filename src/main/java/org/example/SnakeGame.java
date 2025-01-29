@@ -74,6 +74,34 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         appleX = random.nextInt(WIDTH) * TILE_SIZE;
         appleY = random.nextInt(HEIGHT) * TILE_SIZE;
     }
+    public void move() {
+        for (int i = bodyParts; i > 0; i--) {
+            x[i] = x[i - 1];
+            y[i] = y[i - 1];
+        }
+
+        switch (direction) {
+            case 'U':
+                y[0] -= TILE_SIZE;
+                break;
+            case 'D':
+                y[0] += TILE_SIZE;
+                break;
+            case 'L':
+                x[0] -= TILE_SIZE;
+                break;
+            case 'R':
+                x[0] += TILE_SIZE;
+                break;
+        }
+    }
+    public void checkApple() {
+        if (x[0] == appleX && y[0] == appleY) {
+            bodyParts++;
+            applesEaten++;
+            newApple();
+        }
+    }
 
 
     public static void main(String[] args) {
