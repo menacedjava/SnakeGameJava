@@ -102,13 +102,13 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
             newApple();
         }
     }
-//    public void checkCollisions() {
-//        // Snake collides with itself
-//        for (int i = bodyParts; i > 0; i--) {
-//            if (x[0] == x[i] && y[0] == y[i]) {
-//                running = false;
-//            }
-//        }
+    public void checkCollisions() {
+        // Snake collides with itself
+        for (int i = bodyParts; i > 0; i--) {
+            if (x[0] == x[i] && y[0] == y[i]) {
+                running = false;
+            }
+        }
 
         // Snake hits border
 //        if (x[0] < 0 || x[0] >= SCREEN_WIDTH || y[0] < 0 || y[0] >= SCREEN_HEIGHT) {
