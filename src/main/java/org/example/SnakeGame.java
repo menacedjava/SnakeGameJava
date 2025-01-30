@@ -119,16 +119,16 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
             timer.stop();
         }
     }
-//    public void gameOver(Graphics g) {
-//        g.setColor(Color.RED);
-//        g.setFont(new Font("Arial", Font.BOLD, 40));
-//        FontMetrics metrics = getFontMetrics(g.getFont());
-//        g.drawString("Game Over", (SCREEN_WIDTH - metrics.stringWidth("Game Over")) / 2, SCREEN_HEIGHT / 2);
-//
-//        g.setColor(Color.WHITE);
-//        g.setFont(new Font("Arial", Font.BOLD, 18));
-//        g.drawString("Score: " + applesEaten, SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2 + 40);
-//    }
+    public void gameOver(Graphics g) {
+        g.setColor(Color.RED);
+        g.setFont(new Font("Arial", Font.BOLD, 40));
+        FontMetrics metrics = getFontMetrics(g.getFont());
+        g.drawString("Game Over", (SCREEN_WIDTH - metrics.stringWidth("Game Over")) / 2, SCREEN_HEIGHT / 2);
+
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 18));
+        g.drawString("Score: " + applesEaten, SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2 + 40);
+    }
 
 
     public static void main(String[] args) {
