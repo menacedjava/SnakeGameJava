@@ -111,13 +111,13 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         }
 
         // Snake hits border
-//        if (x[0] < 0 || x[0] >= SCREEN_WIDTH || y[0] < 0 || y[0] >= SCREEN_HEIGHT) {
-//            running = false;
-//        }
-//
-//        if (!running) {
-//            timer.stop();
-//        }
+        if (x[0] < 0 || x[0] >= SCREEN_WIDTH || y[0] < 0 || y[0] >= SCREEN_HEIGHT) {
+            running = false;
+        }
+
+        if (!running) {
+            timer.stop();
+        }
     }
 //    public void gameOver(Graphics g) {
 //        g.setColor(Color.RED);
