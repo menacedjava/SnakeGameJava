@@ -80,20 +80,20 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
             y[i] = y[i - 1];
         }
 
-//        switch (direction) {
-//            case 'U':
-//                y[0] -= TILE_SIZE;
-//                break;
-//            case 'D':
-//                y[0] += TILE_SIZE;
-//                break;
-//            case 'L':
-//                x[0] -= TILE_SIZE;
-//                break;
-//            case 'R':
-//                x[0] += TILE_SIZE;
-//                break;
-//        }
+        switch (direction) {
+            case 'U':
+                y[0] -= TILE_SIZE;
+                break;
+            case 'D':
+                y[0] += TILE_SIZE;
+                break;
+            case 'L':
+                x[0] -= TILE_SIZE;
+                break;
+            case 'R':
+                x[0] += TILE_SIZE;
+                break;
+        }
     }
 //    public void checkApple() {
 //        if (x[0] == appleX && y[0] == appleY) {
